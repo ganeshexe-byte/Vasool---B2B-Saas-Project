@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vasool: get paid on time, keep the customer</title>
+  <meta name="description" content="Vasool helps small wholesalers, distributors and job-work units collect what they are owed, with a calm daily view and reminders that protect the relationship.">
+  <meta name="theme-color" content="#f3f6f1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%230c3b2e'/%3E%3Ccircle cx='20' cy='20' r='11' fill='%23f0a81c'/%3E%3Cpath d='M14.5 20.5l4 4 7.5-8.5' fill='none' stroke='%230c3b2e' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+  <!-- FONTS: Unbounded = logo, Epilogue = interface, Kalam = handwriting -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800&family=Epilogue:wght@400;500;600;700;800&family=Kalam:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M21 3L10 14M21 3l-7 18-4-7-7-4 18-7z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3v5M12 16v5M3 12h5M16 12h5M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/></symbol>
+  </svg>
+
+  <div class="progress" aria-hidden="true"></div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- ============================ HEADER ============================ -->
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="logo" href="#top" aria-label="Vasool, back to top">
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <rect class="lm-bg" width="40" height="40" rx="11"/>
+          <circle class="lm-coin" cx="20" cy="20" r="11"/>
+          <path class="lm-tick" d="M14.5 20.5l4 4 7.5-8.5" pathLength="1"/>
+        </svg>
+        <span class="logo-word" aria-hidden="true">vas<span class="o o1">o</span><span class="o o2">o</span>l</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="#how">How it works</a>
+        <a href="#try">Try it</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+
+      <a class="btn btn-ghost btn-sm bar-cta" href="dashboard.html">Go to dashboard</a>
+      <a class="btn btn-primary btn-sm bar-cta" href="#book">Book a demo</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================ HERO ============================ -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+
+        <div class="hero-copy">
+          <p class="dict">
+            <span class="dict-word" lang="hi">वसूल</span>
+            <span class="dict-def"><b>vasool</b> (verb): to collect what is owed.</span>
+          </p>
+
+          <h1 class="h1">
+            <span class="line"><span>Get paid</span></span>
+            <span class="line"><span>on time.</span></span>
+            <span class="line"><span>Keep the</span></span>
+            <span class="line"><span>customer.</span></span>
+          </h1>
+
+          <p class="lead">
+            Vasool shows who owes you, who needs a nudge today, and drafts the message in words that protect the relationship. Made for wholesalers, distributors and job-work units that sell on credit.
+          </p>
+
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#book">Book a demo</a>
+            <a class="btn btn-ghost" href="#try">Try the live preview</a>
+            <a class="btn btn-ghost" href="dashboard.html">Go to dashboard</a>
+          </div>
+        </div>
+
+        <!-- Signature interaction: the tone dial -->
+        <div class="dial">
+          <input type="radio" name="hero-tone" id="ht1" class="vh">
+          <input type="radio" name="hero-tone" id="ht2" class="vh" checked>
+          <input type="radio" name="hero-tone" id="ht3" class="vh">
+
+          <div class="dial-card">
+            <div class="dial-head">
+              <span class="avatar">S</span>
+              <div class="who">
+                <strong>Sharma Traders</strong>
+                <span class="sub">₹48,500 across 2 invoices</span>
+              </div>
+              <span class="chip late">12 days late</span>
+            </div>
+
+            <p class="dial-q" id="dial-q">How do you want to ask?</p>
+            <div class="seg" role="group" aria-labelledby="dial-q">
+              <label for="ht1">Gentle</label>
+              <label for="ht2">Clear</label>
+              <label for="ht3">Firm</label>
+            </div>
+
+            <div class="chat">
+              <div class="msg hm1">
+                <input type="checkbox" id="sh1" class="vh">
+                <div class="bubble">
+                  <p>Namaste Rakesh ji. Hope the week is going well. A small reminder that two of our invoices, INV-2041 and INV-2056, are still open: ₹48,500 in all. Could you let us know when it can be cleared? Thank you.</p>
+                  <p class="sign">Patil Distributors</p>
+                  <span class="stamp" aria-hidden="true">Sent</span>
+                </div>
+                <label class="btn btn-primary send" for="sh1"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label>
+              </div>
+
+              <div class="msg hm2">
+                <input type="checkbox" id="sh2" class="vh">
+                <div class="bubble">
+                  <p>Namaste Rakesh ji. INV-2041 (₹31,000, due 2 Nov) and INV-2056 (₹17,500, due 9 Nov) are overdue: ₹48,500 in total. Please send us a payment date by Friday so we can plan our stock. Thank you.</p>
+                  <p class="sign">Patil Distributors</p>
+                  <span class="stamp" aria-hidden="true">Sent</span>
+                </div>
+                <label class="btn btn-primary send" for="sh2"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label>
+              </div>
+
+              <div class="msg hm3">
+                <input type="checkbox" id="sh3" class="vh">
+                <div class="bubble">
+                  <p>Rakesh ji, ₹48,500 across INV-2041 and INV-2056 is overdue. Please pay by Monday, or we will have to hold new orders until it is cleared. Please confirm today.</p>
+                  <p class="sign">Patil Distributors</p>
+                  <span class="stamp" aria-hidden="true">Sent</span>
+                </div>
+                <label class="btn btn-primary send" for="sh3"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label>
+              </div>
+            </div>
+          </div>
+          <p class="dial-note">Sample data. Pick a tone, then press send.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ PROBLEM ============================ -->
+    <section class="section problem" id="problem">
+      <div class="wrap problem-grid">
+
+        <div class="problem-copy">
+          <h2>“Kal de dunga” often means two months of waiting.</h2>
+          <p>You supplied the goods. You trust the customer. And you still wait, because asking feels like risking a relationship you have built over years.</p>
+          <p>Most owners are not careless about dues. The money sits in a notebook, a few WhatsApp chats and memory, so they are often unsure of the exact number. It is hard to ask for a number you are unsure of.</p>
+
+          <div class="gap" role="img" aria-label="The law expects payment within 45 days. Indian small businesses wait 73 days on average.">
+            <div class="gap-row">
+              <span class="gap-label">The law expects</span>
+              <div class="track"><i style="--w:45"></i></div>
+              <b class="gap-val">45 days</b>
+            </div>
+            <div class="gap-row">
+              <span class="gap-label">Average actual wait</span>
+              <div class="track track-late"><i style="--w:73"></i></div>
+              <b class="gap-val">73 days</b>
+            </div>
+          </div>
+          <p class="source">Sources: Recordent, Indian SME Receivables Report 2026; MSMED Act, 2006.</p>
+        </div>
+
+        <!-- Flip card: notebook <-> Vasool -->
+        <div class="khata">
+          <input type="checkbox" id="flip" class="vh">
+          <div class="khata-card">
+            <div class="face face-front notebook">
+              <p class="scrawl">Sharma: 48500 ?? (kal dega)</p>
+              <p class="scrawl">Krishna ag.: 22k, Diwali baad?</p>
+              <p class="scrawl">Mehta: 60 + 45 ... phone nahi uthata</p>
+              <p class="scrawl"><s>Joshi: 15800</s> paid?? check!</p>
+              <p class="scrawl">kaun kitna baaki: yaad nahi</p>
+            </div>
+            <div class="face face-back clean">
+              <div class="clean-head"><strong>Today</strong><span>3 need a nudge</span></div>
+              <ul class="clean-list">
+                <li><span class="avatar">S</span><div class="who"><strong>Sharma Traders</strong><span class="chip late">12 days late</span></div><b>₹48,500</b></li>
+                <li><span class="avatar">K</span><div class="who"><strong>Krishna Agencies</strong><span class="chip soon">Due in 3 days</span></div><b>₹22,000</b></li>
+                <li><span class="avatar">M</span><div class="who"><strong>Mehta &amp; Sons</strong><span class="chip call">Needs a call</span></div><b>₹1,05,000</b></li>
+                <li class="quiet"><span class="avatar">J</span><div class="who"><strong>Joshi Hardware</strong><span class="chip ok">On time</span></div><b>₹15,800</b></li>
+              </ul>
+            </div>
+          </div>
+          <label class="flipper" for="flip">
+            <span>Notebook</span><span>Vasool</span>
+          </label>
+          <p class="khata-note">Flip the page. Sample data.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================ HOW IT WORKS ============================ -->
+    <section class="section how" id="how">
+      <div class="wrap">
+        <h2 class="sec-title">From notebook to nudge in three steps</h2>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-n" aria-hidden="true">1</span>
+            <h3>List who owes what</h3>
+            <p>Add your credit customers and their open invoices once. Each customer gets a plain status: on time, due soon, late or needs a call.</p>
+          </li>
+          <li class="step">
+            <span class="step-n" aria-hidden="true">2</span>
+            <h3>See who needs you today</h3>
+            <p>One short list, sorted by urgency. You do not have to dig through chats or turn pages to know where to start.</p>
+          </li>
+          <li class="step">
+            <span class="step-n" aria-hidden="true">3</span>
+            <h3>Send words that fit</h3>
+            <p>Pick Gentle, Clear or Firm. Vasool fills in the names, invoice numbers and amounts, so you only choose how it sounds.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================ TRY IT ============================ -->
+    <section class="section demo-sec" id="try">
+      <div class="wrap">
+        <div class="demo-head">
+          <h2>Pick a customer. Pick a tone. Send.</h2>
+          <p>Everything below is sample data. It runs on HTML and CSS alone, with no scripts. For the full app, <a href="dashboard.html" style="color:#fff;text-underline-offset:4px">go to the dashboard</a>.</p>
+        </div>
+
+        <div class="demo">
+          <input type="radio" name="cust" id="c1" class="vh" checked>
+          <input type="radio" name="cust" id="c2" class="vh">
+          <input type="radio" name="cust" id="c3" class="vh">
+          <input type="radio" name="tone" id="t1" class="vh">
+          <input type="radio" name="tone" id="t2" class="vh" checked>
+          <input type="radio" name="tone" id="t3" class="vh">
+
+          <div class="window">
+            <div class="window-bar">
+              <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="window-title">Vasool: today</span>
+              <span class="pill">Sample data</span>
+            </div>
+
+            <div class="window-body">
+
+              <div class="col col-list">
+                <p class="col-title">Customers</p>
+                <div class="list">
+                  <label class="cust" for="c1">
+                    <span class="avatar">S</span>
+                    <span class="who"><strong>Sharma Traders</strong><span class="chip late">12 days late</span></span>
+                    <b>₹48,500</b>
+                  </label>
+                  <label class="cust" for="c2">
+                    <span class="avatar">K</span>
+                    <span class="who"><strong>Krishna Agencies</strong><span class="chip soon">Due in 3 days</span></span>
+                    <b>₹22,000</b>
+                  </label>
+                  <label class="cust" for="c3">
+                    <span class="avatar">M</span>
+                    <span class="who"><strong>Mehta &amp; Sons</strong><span class="chip call">Needs a call</span></span>
+                    <b>₹1,05,000</b>
+                  </label>
+                </div>
+              </div>
+
+              <div class="col col-detail">
+                <p class="col-title">Account</p>
+
+                <div class="detail detail-c1">
+                  <h3>Sharma Traders</h3>
+                  <p class="relation">Rakesh Sharma. Customer since 2019. Prefers WhatsApp.</p>
+                  <div class="owed"><span>Total owed</span><strong>₹48,500</strong></div>
+                  <ul class="ledger">
+                    <li><div><b>INV-2041</b><span>Issued 3 Oct, due 2 Nov</span></div><div class="amt">₹31,000<span class="late-txt">12 days late</span></div></li>
+                    <li><div><b>INV-2056</b><span>Issued 18 Oct, due 9 Nov</span></div><div class="amt">₹17,500<span class="late-txt">5 days late</span></div></li>
+                  </ul>
+                </div>
+
+                <div class="detail detail-c2">
+                  <h3>Krishna Agencies</h3>
+                  <p class="relation">Suresh Krishna. Customer since 2021. Prefers calls.</p>
+                  <div class="owed"><span>Total owed</span><strong>₹22,000</strong></div>
+                  <ul class="ledger">
+                    <li><div><b>INV-2063</b><span>Issued 28 Oct, due 17 Nov</span></div><div class="amt">₹22,000<span class="soon-txt">Due in 3 days</span></div></li>
+                  </ul>
+                </div>
+
+                <div class="detail detail-c3">
+                  <h3>Mehta &amp; Sons</h3>
+                  <p class="relation">Anil Mehta. Customer since 2017. Prefers calls.</p>
+                  <div class="owed"><span>Total owed</span><strong>₹1,05,000</strong></div>
+                  <ul class="ledger">
+                    <li><div><b>INV-1987</b><span>Issued 12 Sep, due 28 Sep</span></div><div class="amt">₹60,000<span class="late-txt">47 days late</span></div></li>
+                    <li><div><b>INV-2012</b><span>Issued 30 Sep, due 15 Oct</span></div><div class="amt">₹45,000<span class="late-txt">30 days late</span></div></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="col col-compose">
+                <p class="col-title" id="tone-title">Reminder</p>
+                <div class="seg seg-demo" role="group" aria-labelledby="tone-title">
+                  <label for="t1">Gentle<small class="sug sug-t1">suggested</small></label>
+                  <label for="t2">Clear<small class="sug sug-t2">suggested</small></label>
+                  <label for="t3">Firm<small class="sug sug-t3">suggested</small></label>
+                </div>
+
+                <div class="vsays">
+                  <svg class="i" aria-hidden="true"><use href="#i-spark"/></svg>
+                  <p class="vs vs-c1"><b>Vasool suggests Clear.</b> At 12 days late, a firm date helps both sides.</p>
+                  <p class="vs vs-c2"><b>Vasool suggests Gentle.</b> It is not due yet, so a friendly heads-up is enough.</p>
+                  <p class="vs vs-c3"><b>Vasool suggests a call first.</b> At 47 days, a message alone can feel cold. Then send Clear.</p>
+                </div>
+
+                <div class="chat">
+                  <div class="msg m-c1-t1">
+                    <input type="checkbox" id="s-c1-t1" class="vh">
+                    <div class="bubble"><p>Namaste Rakesh ji. Hope the week is going well. A small reminder that INV-2041 and INV-2056 are still open: ₹48,500 in all. Could you let us know when it can be cleared? Thank you.</p><p class="sign">Patil Distributors</p><span class="stamp" aria-hidden="true">Sent</span></div>
+                    <label class="btn btn-primary send" for="s-c1-t1"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label>
+                  </div>
+                  <div class="msg m-c1-t2">
+                    <input type="checkbox" id="s-c1-t2" class="vh">
+                    <div class="bubble"><p>Namaste Rakesh ji. INV-2041 (₹31,000, due 2 Nov) and INV-2056 (₹17,500, due 9 Nov) are overdue: ₹48,500 in total. Please send us a payment date by Friday so we can plan our stock. Thank you.</p><p class="sign">Patil Distributors</p><span class="stamp" aria-hidden="true">Sent</span></div>
+                    <label class="btn btn-primary send" for="s-c1-t2"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label>
+                  </div>
+                  <div class="msg m-c1-t3">
+                    <input type="checkbox" id="s-c1-t3" class="vh">
+                    <div class="bubble"><p>Rakesh ji, ₹48,500 across INV-2041 and INV-2056 is overdue. Please pay by Monday, or we will have to hold new orders until it is cleared. Please confirm today.</p><p class="sign">Patil Distributors</p><span class="stamp" aria-hidden="true">Sent</span></div>
+                    <label class="btn btn-primary send" for="s-c1-t3"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label>
+                  </div>
+
+                  <div class="msg m-c2-t1">
+                    <input type="checkbox" id="s-c2-t1" class="vh">
+                    <div class="bubble"><p>Namaste Suresh ji. A quick heads-up that INV-2063 (₹22,000) falls due on 17 Nov. Our UPI details are below if that is easier. Thank you for your continued support.</p><p class="sign">Patil Distributors</p><span class="stamp" aria-hidden="true">Sent</span></div>
+                    <label class="btn btn-primary send" for="s-c2-t1"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label>
+                  </div>
+                  <div class="msg m-c2-t2">
+                    <input type="checkbox" id="s-c2-t2" class="vh">
+                    <div class="bubble"><p>Namaste Suresh ji. INV-2063 for ₹22,000 is due on 17 Nov. Please confirm the payment date so we can update our books.</p><p class="sign">Patil Distributors</p><span class="stamp" aria-hidden="true">Sent</span></div>
+                    <label class="btn btn-primary send" for="s-c2-t2"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label>
+                  </div>
+                  <div class="msg m-c2-t3">
+                    <input type="checkbox" id="s-c2-t3" class="vh">
+                    <div class="bubble"><p>Suresh ji, INV-2063 (₹22,000) falls due on 17 Nov. Please clear it on or before that date. We would rather not hold your next order.</p><p class="sign">Patil Distributors</p><span class="stamp" aria-hidden="true">Sent</span></div>
+                    <label class="btn btn-primary send" for="s-c2-t3"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label>
+                  </div>
+
+                  <div class="msg m-c3-t1">
+                    <input type="checkbox" id="s-c3-t1" class="vh">
+                    <div class="bubble"><p>Namaste Anil ji. Hope you and the family are well. We wanted to check in about two open invoices, ₹1,05,000 in all. Could we find a time to talk this week? Thank you.</p><p class="sign">Patil Distributors</p><span class="stamp" aria-hidden="true">Sent</span></div>
+                    <label class="btn btn-primary send" for="s-c3-t1"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label>
+                  </div>
+                  <div class="msg m-c3-t2">
+                    <input type="checkbox" id="s-c3-t2" class="vh">
+                    <div class="bubble"><p>Namaste Anil ji. INV-1987 (₹60,000) and INV-2012 (₹45,000) are overdue: ₹1,05,000 in total. Please call us today so we can agree a payment plan.</p><p class="sign">Patil Distributors</p><span class="stamp" aria-hidden="true">Sent</span></div>
+                    <label class="btn btn-primary send" for="s-c3-t2"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label>
+                  </div>
+                  <div class="msg m-c3-t3">
+                    <input type="checkbox" id="s-c3-t3" class="vh">
+                    <div class="bubble"><p>Anil ji, ₹1,05,000 has been overdue for more than a month. Unless we agree a payment date by Monday, we will have to pause supplies. Please call me today.</p><p class="sign">Patil Distributors</p><span class="stamp" aria-hidden="true">Sent</span></div>
+                    <label class="btn btn-primary send" for="s-c3-t3"><svg class="i" aria-hidden="true"><use href="#i-send"/></svg><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FEATURES ============================ -->
+    <section class="section features" id="features">
+      <div class="wrap">
+        <h2 class="sec-title">Built for the way you already ask</h2>
+
+        <ul class="rows">
+          <li class="row">
+            <h3>One calm daily view</h3>
+            <p>A short list of who needs you today, sorted by urgency. No digging through chats.</p>
+            <div class="viz viz-daily" aria-hidden="true">
+              <span class="chip late">Sharma</span><span class="chip soon">Krishna</span><span class="chip call">Mehta</span>
+            </div>
+          </li>
+          <li class="row">
+            <h3>Four plain statuses</h3>
+            <p>On time, due soon, late, or needs a call. You see where every customer stands at a glance.</p>
+            <div class="viz viz-status" aria-hidden="true">
+              <span class="chip ok">On time</span><span class="chip soon">Due soon</span><span class="chip late">Late</span><span class="chip call">Needs a call</span>
+            </div>
+          </li>
+          <li class="row">
+            <h3>Three tones for every reminder</h3>
+            <p>Gentle, Clear or Firm. Vasool fills in names, invoices and amounts. You choose the words.</p>
+            <div class="viz viz-tone" aria-hidden="true">
+              <i style="--w:42%"><b>Gentle</b></i><i style="--w:70%"><b>Clear</b></i><i style="--w:100%"><b>Firm</b></i>
+            </div>
+          </li>
+          <li class="row">
+            <h3>Itemised, dated history</h3>
+            <p>Each reminder carries the invoices behind the total, so there is no argument about the number.</p>
+            <div class="viz viz-ledger" aria-hidden="true">
+              <p><span>INV-2041</span><b>₹31,000</b></p>
+              <p><span>INV-2056</span><b>₹17,500</b></p>
+              <p class="tot"><span>Total</span><b>₹48,500</b></p>
+            </div>
+          </li>
+          <li class="row">
+            <h3>Made for a small phone</h3>
+            <p>Large text and one action per screen, so it works between customers at the counter.</p>
+            <div class="viz viz-phone" aria-hidden="true">
+              <div class="phone"><i></i><i></i><i></i></div>
+            </div>
+          </li>
+          <li class="row">
+            <h3>Credit limits that start the talk early</h3>
+            <p>Set a limit for each customer. Vasool tells you when someone is close, before it becomes a chase.</p>
+            <div class="viz viz-limit" aria-hidden="true">
+              <div class="meter"><i></i></div>
+              <small class="s1">₹70,000 of ₹1,00,000</small>
+              <small class="s2">Limit reached. Time to talk.</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================ PRICING ============================ -->
+    <section class="section pricing" id="pricing">
+      <div class="wrap">
+        <div class="pricing-head">
+          <h2>Pricing that grows with your customer list</h2>
+          <p>Sample pricing for this prototype.</p>
+        </div>
+
+        <div class="pricing-wrap">
+          <input type="checkbox" id="yearly" class="vh">
+          <div class="billing">
+            <span class="b-m">Monthly</span>
+            <label class="switch" for="yearly"><span class="sr-only">Bill yearly</span><i></i></label>
+            <span class="b-y">Yearly <em>2 months free</em></span>
+          </div>
+
+          <div class="plans">
+            <article class="plan">
+              <h3>Starter</h3>
+              <p class="plan-for">For trying Vasool with your closest customers.</p>
+              <p class="price"><span class="roll"><span class="roll-in"><b>₹0</b><b>₹0</b></span></span><small>forever</small></p>
+              <ul class="plan-list">
+                <li>Up to 15 customers</li>
+                <li>Daily view and four statuses</li>
+                <li>Gentle, Clear and Firm reminders</li>
+                <li>Itemised invoice history</li>
+              </ul>
+              <a class="btn btn-ghost" href="dashboard.html">Start free</a>
+            </article>
+
+            <article class="plan plan-featured">
+              <h3>Growth</h3>
+              <p class="plan-for">For sellers with a steady list of credit customers.</p>
+              <p class="price"><span class="roll"><span class="roll-in"><b>₹799</b><b>₹666</b></span></span><small><span class="per-m">per month</span><span class="per-y">per month, billed ₹7,990 yearly</span></small></p>
+              <ul class="plan-list">
+                <li>Up to 200 customers</li>
+                <li>Everything in Starter</li>
+                <li>Credit limits for each customer</li>
+                <li>Reminder templates in Hindi and English</li>
+                <li>2 team members</li>
+              </ul>
+              <a class="btn btn-primary" href="#book">Book a demo</a>
+            </article>
+
+            <article class="plan">
+              <h3>Business</h3>
+              <p class="plan-for">For distributors with a team and a long list.</p>
+              <p class="price"><span class="roll"><span class="roll-in"><b>₹1,999</b><b>₹1,666</b></span></span><small><span class="per-m">per month</span><span class="per-y">per month, billed ₹19,990 yearly</span></small></p>
+              <ul class="plan-list">
+                <li>Unlimited customers</li>
+                <li>Everything in Growth</li>
+                <li>Up to 10 team members</li>
+                <li>Monthly collection report</li>
+                <li>Priority support</li>
+              </ul>
+              <a class="btn btn-ghost" href="#book">Book a demo</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ FAQ ============================ -->
+    <section class="section faq" id="faq">
+      <div class="wrap faq-grid">
+        <h2>Questions owners ask</h2>
+        <div class="faq-list">
+          <details name="faq" open>
+            <summary>Is Vasool a real product?</summary>
+            <p>Vasool is a design case study. The demo uses sample data and the whole page runs on HTML and CSS alone. Nothing you type is saved.</p>
+          </details>
+          <details name="faq">
+            <summary>Will reminders feel rude to my customers?</summary>
+            <p>Every reminder can start Gentle. Clear and Firm are one tap away, and Vasool suggests the tone that fits how late the payment is.</p>
+          </details>
+          <details name="faq">
+            <summary>Do my customers need to install anything?</summary>
+            <p>No. A reminder is a plain message your customer can read on any phone.</p>
+          </details>
+          <details name="faq">
+            <summary>Can I bring in my existing notebook?</summary>
+            <p>You add your customers and open invoices once. After that, Vasool keeps the running total for each customer.</p>
+          </details>
+          <details name="faq">
+            <summary>Does Vasool replace my accounting software?</summary>
+            <p>No. It does one job: collecting what you are owed. It sits beside your billing or accounts tool.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ BOOK A DEMO ============================ -->
+    <section class="book" id="book">
+      <div class="wrap">
+        <div class="book-panel">
+          <div class="book-copy">
+            <h2>Tell us who owes you the most.</h2>
+            <p>Book a 20-minute demo. We will walk through Vasool with a few of your own customers, so you can see how it feels in your business.</p>
+          </div>
+
+          <div class="book-card">
+            <form class="form" action="#thanks" method="get">
+              <div class="field">
+                <input id="f-name" name="name" type="text" placeholder=" " autocomplete="name" required>
+                <label for="f-name">Your name</label>
+              </div>
+              <div class="field">
+                <input id="f-biz" name="business" type="text" placeholder=" " autocomplete="organization" required>
+                <label for="f-biz">Business name</label>
+              </div>
+              <div class="field">
+                <input id="f-tel" name="phone" type="tel" placeholder=" " autocomplete="tel" inputmode="tel" required>
+                <label for="f-tel">Phone number</label>
+              </div>
+              <div class="field">
+                <select id="f-size" name="customers" required>
+                  <option value="" disabled selected hidden></option>
+                  <option>Up to 20</option>
+                  <option>21 to 100</option>
+                  <option>101 to 300</option>
+                  <option>More than 300</option>
+                </select>
+                <label for="f-size">How many customers buy on credit?</label>
+              </div>
+              <button class="btn btn-primary" type="submit">Book my demo</button>
+              <p class="fine">This is a design prototype. Nothing you enter is sent or stored.</p>
+            </form>
+
+            <div class="thanks" id="thanks">
+              <svg class="thanks-mark" viewBox="0 0 40 40" aria-hidden="true">
+                <circle cx="20" cy="20" r="18" />
+                <path d="M12 20.5l5.5 5.5L28.5 14" pathLength="1"/>
+              </svg>
+              <h3>Demo requested</h3>
+              <p>Thank you. Because this is a prototype, nothing was actually sent.</p>
+              <a class="btn btn-ghost" href="#top">Back to the top</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================ FOOTER ============================ -->
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <a class="logo logo-sm" href="#top" aria-label="Vasool, back to top">
+        <span class="logo-word" aria-hidden="true">vas<span class="o o1">o</span><span class="o o2">o</span>l</span>
+      </a>
+      <p>A design case study built with HTML and CSS only. Designed and built by Ganesh Gaikwad.</p>
+      <nav class="foot-nav" aria-label="Footer">
+        <a href="#how">How it works</a>
+        <a href="#try">Try it</a>
+        <a href="#pricing">Pricing</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>

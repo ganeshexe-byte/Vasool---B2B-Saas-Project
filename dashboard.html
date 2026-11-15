@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vasool: dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@800&family=Epilogue:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+<div class="app">
+
+<!-- STATE: view, customer, tone, filter -->
+<input type="radio" name="v" id="v1" class="vh" checked><input type="radio" name="v" id="v2" class="vh"><input type="radio" name="v" id="v3" class="vh"><input type="radio" name="v" id="v4" class="vh">
+<input type="radio" name="c" id="c1" class="vh" checked><input type="radio" name="c" id="c2" class="vh"><input type="radio" name="c" id="c3" class="vh"><input type="radio" name="c" id="c4" class="vh">
+<input type="radio" name="t" id="t1" class="vh"><input type="radio" name="t" id="t2" class="vh" checked><input type="radio" name="t" id="t3" class="vh">
+<input type="radio" name="f" id="f1" class="vh" checked><input type="radio" name="f" id="f2" class="vh"><input type="radio" name="f" id="f3" class="vh">
+
+<aside class="side">
+  <a class="logo" href="index.html" aria-label="Vasool, back to website"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#173f33"/><circle cx="20" cy="20" r="11" fill="#f0a81c"/><path d="M14.5 20.5l4 4 7.5-8.5" fill="none" stroke="#0c3b2e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>vas<b>o</b>ol</span></a>
+  <nav class="nav" aria-label="Dashboard">
+    <label for="v1"><i></i>Today</label><label for="v2"><i></i>Customers</label><label for="v3"><i></i>Invoices</label><label for="v4"><i></i>Reminders</label>
+  </nav>
+  <div class="biz"><strong>Patil Distributors</strong>Pune · Sample account</div>
+</aside>
+
+<main class="main" id="main">
+
+<!-- ===== TODAY ===== -->
+<section class="view view-1">
+  <div class="top"><div><h1>Good morning, Patil ji</h1><p>Mon, 16 Nov 2026 · 3 customers need you today</p></div><span class="pill">Sample data</span></div>
+  <div class="work">
+    <div class="card"><h2>Who needs a nudge</h2>
+      <div class="list">
+        <label class="cust" for="c3"><span class="avatar">M</span><span class="who"><strong>Mehta &amp; Sons</strong><span class="chip call">Needs a call</span></span><b class="amt">₹1,05,000</b></label>
+        <label class="cust" for="c1"><span class="avatar">S</span><span class="who"><strong>Sharma Traders</strong><span class="chip late">14 days late</span></span><b class="amt">₹48,000</b></label>
+        <label class="cust" for="c2"><span class="avatar">K</span><span class="who"><strong>Krishna Agencies</strong><span class="chip soon">Due in 3 days</span></span><b class="amt">₹22,000</b></label>
+        <label class="cust" for="c4"><span class="avatar">J</span><span class="who"><strong>Joshi Hardware</strong><span class="chip ok">On time</span></span><b class="amt">₹16,000</b></label>
+      </div>
+    </div>
+    <div class="card"><h2>Reminder</h2>
+      <div class="a a1"><h3>Sharma Traders</h3><p>Rakesh Sharma · prefers WhatsApp</p><p class="tot"><span>INV-2041 + INV-2056</span><span>₹48,000</span></p></div>
+      <div class="a a2"><h3>Krishna Agencies</h3><p>Suresh Krishna · prefers calls</p><p class="tot"><span>INV-2063</span><span>₹22,000</span></p></div>
+      <div class="a a3"><h3>Mehta &amp; Sons</h3><p>Anil Mehta · prefers calls</p><p class="tot"><span>INV-1987 + INV-2012</span><span>₹1,05,000</span></p></div>
+      <div class="a a4"><h3>Joshi Hardware</h3><p>Ravi Joshi · prefers WhatsApp</p><p class="tot"><span>INV-2070</span><span>₹16,000</span></p></div>
+      <div class="seg" role="group" aria-label="Tone"><label for="t1">Gentle</label><label for="t2">Clear</label><label for="t3">Firm</label></div>
+      <div class="vsays">
+        <p class="vs vs1"><b>Vasool suggests Clear.</b> At 14 days late, a firm date helps both sides.</p>
+        <p class="vs vs2"><b>Vasool suggests Gentle.</b> Not due yet, so a friendly heads-up is enough.</p>
+        <p class="vs vs3"><b>Vasool suggests a call first.</b> At 49 days, a message alone can feel cold. Then send Clear.</p>
+        <p class="vs vs4"><b>Nothing to do.</b> Joshi Hardware pays on time. Next invoice is due 28 Nov.</p>
+      </div>
+      <div class="chat">
+        <div class="msg m11"><input type="checkbox" id="s11" class="vh"><div class="bubble"><p>Namaste Rakesh ji. Hope the week is going well. A small reminder that INV-2041 and INV-2056 are still open: ₹48,000 in all. Could you let us know when it can be cleared? Thank you.</p><p class="sign">Patil Distributors</p><span class="stamp">Sent</span></div><label class="btn" for="s11"><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label></div>
+        <div class="msg m12"><input type="checkbox" id="s12" class="vh"><div class="bubble"><p>Namaste Rakesh ji. INV-2041 (₹31,000, due 2 Nov) and INV-2056 (₹17,000, due 9 Nov) are overdue: ₹48,000 in total. Please send us a payment date by Friday so we can plan our stock. Thank you.</p><p class="sign">Patil Distributors</p><span class="stamp">Sent</span></div><label class="btn" for="s12"><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label></div>
+        <div class="msg m13"><input type="checkbox" id="s13" class="vh"><div class="bubble"><p>Rakesh ji, ₹48,000 across INV-2041 and INV-2056 is overdue. Please pay by Monday, or we will have to hold new orders until it is cleared. Please confirm today.</p><p class="sign">Patil Distributors</p><span class="stamp">Sent</span></div><label class="btn" for="s13"><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label></div>
+        <div class="msg m21"><input type="checkbox" id="s21" class="vh"><div class="bubble"><p>Namaste Suresh ji. A quick heads-up that INV-2063 (₹22,000) falls due on 19 Nov. Our UPI details are below if that is easier. Thank you for your continued support.</p><p class="sign">Patil Distributors</p><span class="stamp">Sent</span></div><label class="btn" for="s21"><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label></div>
+        <div class="msg m22"><input type="checkbox" id="s22" class="vh"><div class="bubble"><p>Namaste Suresh ji. INV-2063 for ₹22,000 is due on 19 Nov. Please confirm the payment date so we can update our books.</p><p class="sign">Patil Distributors</p><span class="stamp">Sent</span></div><label class="btn" for="s22"><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label></div>
+        <div class="msg m23"><input type="checkbox" id="s23" class="vh"><div class="bubble"><p>Suresh ji, INV-2063 (₹22,000) falls due on 19 Nov. Please clear it on or before that date. We would rather not hold your next order.</p><p class="sign">Patil Distributors</p><span class="stamp">Sent</span></div><label class="btn" for="s23"><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label></div>
+        <div class="msg m31"><input type="checkbox" id="s31" class="vh"><div class="bubble"><p>Namaste Anil ji. Hope you and the family are well. We wanted to check in about two open invoices, ₹1,05,000 in all. Could we find a time to talk this week? Thank you.</p><p class="sign">Patil Distributors</p><span class="stamp">Sent</span></div><label class="btn" for="s31"><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label></div>
+        <div class="msg m32"><input type="checkbox" id="s32" class="vh"><div class="bubble"><p>Namaste Anil ji. INV-1987 (₹60,000) and INV-2012 (₹45,000) are overdue: ₹1,05,000 in total. Please call us today so we can agree a payment plan.</p><p class="sign">Patil Distributors</p><span class="stamp">Sent</span></div><label class="btn" for="s32"><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label></div>
+        <div class="msg m33"><input type="checkbox" id="s33" class="vh"><div class="bubble"><p>Anil ji, ₹1,05,000 has been overdue for more than a month. Unless we agree a payment date by Monday, we will have to pause supplies. Please call me today.</p><p class="sign">Patil Distributors</p><span class="stamp">Sent</span></div><label class="btn" for="s33"><span class="when-off">Send reminder</span><span class="when-on">Sent. Tap to undo</span></label></div>
+        <div class="msg m4"><div class="bubble"><p>No reminder needed. INV-2070 (₹16,000) is due on 28 Nov and Joshi Hardware has paid on time for 14 months.</p></div></div>
+      </div>
+      <p class="count">Reminders sent this session: <b></b></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CUSTOMERS ===== -->
+<section class="view view-2">
+  <div class="top"><div><h1>Customers</h1><p>Credit limits start the conversation early.</p></div><span class="pill">Sample data</span></div>
+  <div class="card"><h2>Ageing of what you are owed</h2>
+    <div class="age">
+      <p><span>Not due yet</span><span class="meter"><i style="--w:38"></i></span><b>₹38k</b></p>
+      <p><span>1 to 15 days</span><span class="meter"><i style="--w:48"></i></span><b>₹48k</b></p>
+      <p><span>16 to 30 days</span><span class="meter"><i style="--w:0"></i></span><b>₹0</b></p>
+      <p><span>Over 30 days</span><span class="meter late"><i style="--w:105"></i></span><b>₹105k</b></p>
+    </div>
+  </div>
+  <div class="card"><div class="rows">
+    <div class="row"><span class="who"><span class="avatar">M</span><span><strong>Mehta &amp; Sons</strong><small>Anil Mehta · since 2017</small></span></span><span class="chip call">Needs a call</span><div><div class="meter full"><i style="--u:100%"></i></div><span class="lim">₹1,05,000 of ₹1,00,000 limit</span></div><b class="amt">₹1,05,000</b></div>
+    <div class="row"><span class="who"><span class="avatar">S</span><span><strong>Sharma Traders</strong><small>Rakesh Sharma · since 2019</small></span></span><span class="chip late">14 days late</span><div><div class="meter hi"><i style="--u:80%"></i></div><span class="lim">₹48,000 of ₹60,000 limit</span></div><b class="amt">₹48,000</b></div>
+    <div class="row"><span class="who"><span class="avatar">K</span><span><strong>Krishna Agencies</strong><small>Suresh Krishna · since 2021</small></span></span><span class="chip soon">Due in 3 days</span><div><div class="meter"><i style="--u:44%"></i></div><span class="lim">₹22,000 of ₹50,000 limit</span></div><b class="amt">₹22,000</b></div>
+    <div class="row"><span class="who"><span class="avatar">J</span><span><strong>Joshi Hardware</strong><small>Ravi Joshi · since 2018</small></span></span><span class="chip ok">On time</span><div><div class="meter"><i style="--u:16%"></i></div><span class="lim">₹16,000 of ₹1,00,000 limit</span></div><b class="amt">₹16,000</b></div>
+  </div></div>
+</section>
+
+<!-- ===== INVOICES ===== -->
+<section class="view view-3">
+  <div class="top"><div><h1>Invoices</h1><p>Tick “Mark paid” and watch the totals move.</p></div><div class="f" role="group" aria-label="Filter"><label for="f1">All</label><label for="f2">Open</label><label for="f3">Overdue</label></div></div>
+  <div class="card"><div class="rows">
+    <div class="row inv i1"><input type="checkbox" id="p1" class="vh"><span class="who"><strong>INV-1987</strong><small>Mehta &amp; Sons</small></span><span class="due">Due 28 Sep · <span class="chip call">49 days late</span></span><b class="amt">₹60,000</b><label class="btn sm" for="p1"><span class="when-off">Mark paid</span><span class="when-on">Paid. Undo</span></label></div>
+    <div class="row inv i2"><input type="checkbox" id="p2" class="vh"><span class="who"><strong>INV-2012</strong><small>Mehta &amp; Sons</small></span><span class="due">Due 15 Oct · <span class="chip call">32 days late</span></span><b class="amt">₹45,000</b><label class="btn sm" for="p2"><span class="when-off">Mark paid</span><span class="when-on">Paid. Undo</span></label></div>
+    <div class="row inv i3"><input type="checkbox" id="p3" class="vh"><span class="who"><strong>INV-2041</strong><small>Sharma Traders</small></span><span class="due">Due 2 Nov · <span class="chip late">14 days late</span></span><b class="amt">₹31,000</b><label class="btn sm" for="p3"><span class="when-off">Mark paid</span><span class="when-on">Paid. Undo</span></label></div>
+    <div class="row inv i4"><input type="checkbox" id="p4" class="vh"><span class="who"><strong>INV-2056</strong><small>Sharma Traders</small></span><span class="due">Due 9 Nov · <span class="chip late">7 days late</span></span><b class="amt">₹17,000</b><label class="btn sm" for="p4"><span class="when-off">Mark paid</span><span class="when-on">Paid. Undo</span></label></div>
+    <div class="row inv i5 nod"><input type="checkbox" id="p5" class="vh"><span class="who"><strong>INV-2063</strong><small>Krishna Agencies</small></span><span class="due">Due 19 Nov · <span class="chip soon">in 3 days</span></span><b class="amt">₹22,000</b><label class="btn sm" for="p5"><span class="when-off">Mark paid</span><span class="when-on">Paid. Undo</span></label></div>
+    <div class="row inv i6 nod"><input type="checkbox" id="p6" class="vh"><span class="who"><strong>INV-2070</strong><small>Joshi Hardware</small></span><span class="due">Due 28 Nov · <span class="chip ok">on time</span></span><b class="amt">₹16,000</b><label class="btn sm" for="p6"><span class="when-off">Mark paid</span><span class="when-on">Paid. Undo</span></label></div>
+  </div></div>
+</section>
+
+<!-- ===== REMINDERS ===== -->
+<section class="view view-4">
+  <div class="top"><div><h1>Reminders</h1><p>Every message is dated, so no argument about the number.</p></div><span class="pill">Sample data</span></div>
+  <div class="card"><h2>Recent history</h2>
+    <ul class="log">
+      <li><span class="avatar">M</span><div><strong>Mehta &amp; Sons</strong><p>Called, promised to pay after Diwali.</p></div><span class="tone">Call · 9 Nov</span></li>
+      <li><span class="avatar">S</span><div><strong>Sharma Traders</strong><p>“Namaste Rakesh ji. A small reminder…”</p></div><span class="tone">Gentle · 6 Nov</span></li>
+      <li><span class="avatar">M</span><div><strong>Mehta &amp; Sons</strong><p>“INV-1987 and INV-2012 are overdue…”</p></div><span class="tone">Clear · 2 Nov</span></li>
+      <li><span class="avatar">J</span><div><strong>Joshi Hardware</strong><p>Paid INV-2049 on the due date. Thank-you note sent.</p></div><span class="tone">Gentle · 30 Oct</span></li>
+    </ul>
+    <p class="count">Sent from Today in this session: <b></b></p>
+  </div>
+</section>
+
+<!-- STATS: last in the DOM so the counters have counted, shown first via flex order -->
+<div class="stats" aria-live="polite">
+  <div class="stat"><span>Total outstanding</span><b class="n-out"></b><small>6 open invoices</small></div>
+  <div class="stat bad"><span>Overdue</span><b class="n-od"></b><small>Mehta, Sharma</small></div>
+  <div class="stat"><span>Due this week</span><b class="n-wk"></b><small>Krishna Agencies</small></div>
+  <div class="stat good"><span>Collected today</span><b class="n-paid"></b><small>Reminders sent: <b class="n-sent" style="display:inline;font-size:inherit;letter-spacing:0"></b></small></div>
+</div>
+
+</main>
+</div>
+</body>
+</html>
