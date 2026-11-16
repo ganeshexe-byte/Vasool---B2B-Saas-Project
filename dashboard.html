@@ -16,11 +16,13 @@
 <input type="radio" name="c" id="c1" class="vh" checked><input type="radio" name="c" id="c2" class="vh"><input type="radio" name="c" id="c3" class="vh"><input type="radio" name="c" id="c4" class="vh">
 <input type="radio" name="t" id="t1" class="vh"><input type="radio" name="t" id="t2" class="vh" checked><input type="radio" name="t" id="t3" class="vh">
 <input type="radio" name="f" id="f1" class="vh" checked><input type="radio" name="f" id="f2" class="vh"><input type="radio" name="f" id="f3" class="vh">
+<input type="radio" name="v" id="v5" class="vh"><input type="radio" name="v" id="v6" class="vh">
+<input type="radio" name="r" id="r1" class="vh" checked><input type="radio" name="r" id="r2" class="vh"><input type="radio" name="r" id="r3" class="vh">
 
 <aside class="side">
   <a class="logo" href="index.html" aria-label="Vasool, back to website"><svg viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#173f33"/><circle cx="20" cy="20" r="11" fill="#f0a81c"/><path d="M14.5 20.5l4 4 7.5-8.5" fill="none" stroke="#0c3b2e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><span>vas<b>o</b>ol</span></a>
   <nav class="nav" aria-label="Dashboard">
-    <label for="v1"><i></i>Today</label><label for="v2"><i></i>Customers</label><label for="v3"><i></i>Invoices</label><label for="v4"><i></i>Reminders</label>
+    <label for="v1"><i></i>Today</label><label for="v2"><i></i>Customers</label><label for="v3"><i></i>Invoices</label><label for="v4"><i></i>Reminders</label><label for="v5"><i></i>Analytics</label><label for="v6"><i></i>Settings</label>
   </nav>
   <div class="biz"><strong>Patil Distributors</strong>Pune · Sample account</div>
 </aside>
@@ -114,12 +116,74 @@
   </div>
 </section>
 
+<section class="view view-5">
+  <div class="top"><div><h1>Analytics</h1><p>How well you are collecting, and where the money is stuck.</p></div><span class="pill">Sample data · Jun to Nov 2026</span></div>
+  <div class="kpis">
+    <div class="card kpi"><span>Collection rate</span><b>81%</b><em class="up">▲ 6 pts</em></div>
+    <div class="card kpi"><span>Average days to pay</span><b>66</b><em class="up">▼ 12 days, faster</em></div>
+    <div class="card kpi"><span>Paid on time</span><b>58%</b><em class="up">▲ 9 pts</em></div>
+    <div class="card kpi"><span>Reminder response</span><b>64%</b><em class="up">▲ 4 pts</em></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><div class="ch"><h2>Billed vs collected (₹k)</h2><div class="f" role="group" aria-label="Series"><label for="r1">Both</label><label for="r2">Billed</label><label for="r3">Collected</label></div></div>
+      <div class="bars"><div class="grid-l"><i></i><i></i><i></i><i></i></div><div class="g"><div class="pair"><i class="bl" data-v="₹180k" style="--h:69%"></i><i class="co" data-v="₹150k" style="--h:58%"></i></div><span>Jun</span></div><div class="g"><div class="pair"><i class="bl" data-v="₹210k" style="--h:81%"></i><i class="co" data-v="₹170k" style="--h:65%"></i></div><span>Jul</span></div><div class="g"><div class="pair"><i class="bl" data-v="₹195k" style="--h:75%"></i><i class="co" data-v="₹185k" style="--h:71%"></i></div><span>Aug</span></div><div class="g"><div class="pair"><i class="bl" data-v="₹240k" style="--h:92%"></i><i class="co" data-v="₹190k" style="--h:73%"></i></div><span>Sep</span></div><div class="g"><div class="pair"><i class="bl" data-v="₹225k" style="--h:87%"></i><i class="co" data-v="₹200k" style="--h:77%"></i></div><span>Oct</span></div><div class="g"><div class="pair"><i class="bl" data-v="₹260k" style="--h:100%"></i><i class="co" data-v="₹210k" style="--h:81%"></i></div><span>Nov</span></div></div>
+      <p class="legend"><span><i class="sw bl"></i>Billed</span><span><i class="sw co"></i>Collected</span></p>
+    </div>
+    <div class="card"><h2>Who owes what</h2>
+      <div class="donut"><div class="ring"><div class="mid"><b>₹191k</b><span>open</span></div></div>
+      <ul class="key"><li><i style="background:var(--violet)"></i>Needs a call<b>₹105k</b></li><li><i style="background:var(--rubric)"></i>Late<b>₹48k</b></li><li><i style="background:var(--marigold)"></i>Due soon<b>₹22k</b></li><li><i style="background:var(--field)"></i>On time<b>₹16k</b></li></ul></div>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="card"><h2>Days to pay, by month</h2>
+      <svg class="line" viewBox="0 0 320 135" role="img" aria-label="Average days to pay fell from 78 in June to 66 in November">
+        <g class="gl"><line x1="30" x2="310" y1="20" y2="20"/><line x1="30" x2="310" y1="65" y2="65"/><line x1="30" x2="310" y1="110" y2="110"/></g>
+        <g class="tx"><text x="0" y="24">80</text><text x="0" y="69">70</text><text x="0" y="114">60</text></g>
+        <polygon class="area" points="40,29 92,47 144,38 196,60 248,70 300,83 300,110 40,110"/>
+        <polyline class="ln" points="40,29 92,47 144,38 196,60 248,70 300,83"/>
+        <g class="dots"><circle cx="40" cy="29" r="4"/><circle cx="92" cy="47" r="4"/><circle cx="144" cy="38" r="4"/><circle cx="196" cy="60" r="4"/><circle cx="248" cy="70" r="4"/><circle cx="300" cy="83" r="5"/></g>
+        <g class="tx"><text x="30" y="128">Jun</text><text x="82" y="128">Jul</text><text x="132" y="128">Aug</text><text x="184" y="128">Sep</text><text x="236" y="128">Oct</text><text x="288" y="128">Nov</text></g>
+      </svg>
+      <p class="note">Down from 78 to 66 days. The law expects 45.</p>
+    </div>
+    <div class="card"><h2>Top customers by dues</h2>
+      <div class="age"><p><span>Mehta &amp; Sons</span><span class="meter late"><i style="--w:105"></i></span><b>₹105k</b></p><p><span>Sharma Traders</span><span class="meter"><i style="--w:48"></i></span><b>₹48k</b></p><p><span>Krishna Ag.</span><span class="meter"><i style="--w:22"></i></span><b>₹22k</b></p><p><span>Joshi Hardware</span><span class="meter"><i style="--w:16"></i></span><b>₹16k</b></p></div>
+    </div>
+    <div class="card"><h2>Which tone gets paid</h2>
+      <div class="age p"><p><span>Gentle</span><span class="meter"><i style="--w:62"></i></span><b>62%</b></p><p><span>Clear</span><span class="meter"><i style="--w:74"></i></span><b>74%</b></p><p><span>Firm</span><span class="meter hi"><i style="--w:49"></i></span><b>49%</b></p></div>
+      <p class="note">Share of reminders followed by payment within 7 days.</p>
+    </div>
+  </div>
+</section>
+
+<section class="view view-6">
+  <div class="top"><div><h1>Settings</h1><p>Your business, your team and how reminders behave.</p></div><span class="pill">Not saved in this demo</span></div>
+  <div class="grid2 st">
+    <div class="card"><h2>Business profile</h2>
+      <div class="fl"><label>Business name<input type="text" value="Patil Distributors"></label><label>Owner<input type="text" value="Patil ji"></label><label>Phone<input type="tel" value="+91 98765 43210"></label><label>UPI ID<input type="text" value="patil@upi"></label></div>
+    </div>
+    <div class="card"><h2>Reminder rules</h2>
+      <label class="tg"><span><b>Suggest a tone</b><small>Based on how late the payment is</small></span><input type="checkbox" class="vh" checked><i></i></label>
+      <label class="tg"><span><b>Hindi and English templates</b><small>Namaste openers, “ji” for names</small></span><input type="checkbox" class="vh" checked><i></i></label>
+      <label class="tg"><span><b>Credit limit alerts</b><small>Warn at 80% of a customer’s limit</small></span><input type="checkbox" class="vh" checked><i></i></label>
+      <label class="tg"><span><b>Weekly collection report</b><small>Every Monday, 9 am</small></span><input type="checkbox" class="vh"><i></i></label>
+    </div>
+    <div class="card"><h2>Team</h2>
+      <ul class="log"><li><span class="avatar">P</span><div><strong>Patil ji</strong><p>Owner · full access</p></div><span class="tone">Admin</span></li><li><span class="avatar">A</span><div><strong>Asha</strong><p>Accounts · can send reminders</p></div><span class="tone">Editor</span></li></ul>
+    </div>
+    <div class="card"><h2>Your plan</h2>
+      <h3>Growth</h3><p class="note">12 of 200 customers · 2 of 2 team members</p>
+      <div class="meter" style="margin-top:.8rem"><i style="--u:6%"></i></div>
+    </div>
+  </div>
+</section>
+
 <!-- STATS: last in the DOM so the counters have counted, shown first via flex order -->
 <div class="stats" aria-live="polite">
-  <div class="stat"><span>Total outstanding</span><b class="n-out"></b><small>6 open invoices</small></div>
-  <div class="stat bad"><span>Overdue</span><b class="n-od"></b><small>Mehta, Sharma</small></div>
-  <div class="stat"><span>Due this week</span><b class="n-wk"></b><small>Krishna Agencies</small></div>
-  <div class="stat good"><span>Collected today</span><b class="n-paid"></b><small>Reminders sent: <b class="n-sent" style="display:inline;font-size:inherit;letter-spacing:0"></b></small></div>
+  <div class="stat"><span>Total outstanding</span><b class="n-out"></b><small>6 open invoices · <em class="dn">▼ 4% vs last month</em></small><svg class="spark" viewBox="0 0 80 24" aria-hidden="true"><polyline points="0,6 14,9 28,7 42,12 56,10 68,16 80,18"/></svg></div>
+  <div class="stat bad"><span>Overdue</span><b class="n-od"></b><small>Mehta, Sharma</small><svg class="spark" viewBox="0 0 80 24" aria-hidden="true"><polyline points="0,18 14,15 28,16 42,10 56,12 68,6 80,4"/></svg></div>
+  <div class="stat"><span>Due this week</span><b class="n-wk"></b><small>Krishna Agencies</small><svg class="spark" viewBox="0 0 80 24" aria-hidden="true"><polyline points="0,14 14,12 28,16 42,8 56,10 68,9 80,7"/></svg></div>
+  <div class="stat good"><span>Collected today</span><b class="n-paid"></b><small>Reminders sent: <b class="n-sent" style="display:inline;font-size:inherit;letter-spacing:0"></b></small><svg class="spark" viewBox="0 0 80 24" aria-hidden="true"><polyline points="0,20 14,18 28,19 42,14 56,12 68,8 80,5"/></svg></div>
 </div>
 
 </main>
