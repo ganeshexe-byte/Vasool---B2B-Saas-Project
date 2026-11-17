@@ -918,3 +918,13 @@ input, button { font: inherit; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+
+/* ===== PROMISES PAGE ===== */
+#v7:checked ~ .main .view-7 { position: static; height: auto; overflow: visible; visibility: visible; }
+#v7:checked ~ .side [for="v7"] { background: #fff; color: var(--ledger); }
+#v7:checked ~ .side [for="v7"] i { background: var(--field); opacity: 1; }
+#v7:focus-visible ~ .side [for="v7"] { outline: 3px solid var(--marigold); }
+.view-7 .row { grid-template-columns: 1.4fr auto 1.4fr auto; }
+.view-7 a.btn { text-decoration: none; }
+@media (max-width: 860px) { .view-7 .row { grid-template-columns: 1fr auto; } .view-7 .row > :nth-child(3) { grid-column: 1 / -1; } }
